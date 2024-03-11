@@ -1,3 +1,5 @@
 # Food Delivery App
 
 ![Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14 03 04](https://github.com/chheng-dev/food-delivery-app/assets/95673107/f75620a0-7b92-48bc-b8e0-ae088d5fdb60)
+
+![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.13.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.04.02.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.48.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.44.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.41.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.37.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.33.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.24.png>) ![alt text](<images/iloveimg-resized/Simulator Screenshot - iPhone 14 Pro Max - 2024-03-11 at 14.03.22.png>)
