@@ -118,69 +118,74 @@ class ProfileScreen extends StatelessWidget {
     showModalBottomSheet(
         context: context,
         builder: (context) {
-          return GestureDetector(
-            onTap: () {
-              FocusScope.of(context).requestFocus(FocusNode());
-            },
-            child: Container(
-              width: double.maxFinite,
-              padding: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
-              child: Form(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      child: Text(
-                        'Edit Account'.toUpperCase(),
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
+          return Padding(
+            padding: MediaQuery.of(context).viewInsets,
+            child: SingleChildScrollView(
+              child: GestureDetector(
+                onTap: () {
+                  FocusScope.of(context).requestFocus(FocusNode());
+                },
+                child: Container(
+                  width: double.maxFinite,
+                  padding: EdgeInsets.symmetric(vertical: 18, horizontal: 18),
+                  child: Form(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          child: Text(
+                            'Edit Account'.toUpperCase(),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22,
+                            ),
+                          ),
                         ),
-                      ),
+                        SizedBox(height: 15),
+                        Text("Mobile Phone"),
+                        SizedBox(height: 10),
+                        IntlPhoneField(
+                          onChanged: (value) => {
+                            print(value),
+                          },
+                          initialCountryCode: 'KH',
+                          decoration: InputDecoration(
+                            hintText: "Enter Phone Number",
+                            labelText: "0xx-xxxx-xxx",
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(),
+                            ),
+                          ),
+                        ),
+                        Text("Email"),
+                        SizedBox(height: 10),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              hintText: "Enter Email Address",
+                              labelText: "example@gmail.com",
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(),
+                              )),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          width: double.maxFinite,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0,
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text(
+                              "Continue".toUpperCase(),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                    SizedBox(height: 15),
-                    Text("Mobile Phone"),
-                    SizedBox(height: 10),
-                    IntlPhoneField(
-                      onChanged: (value) => {
-                        print(value),
-                      },
-                      initialCountryCode: 'KH',
-                      decoration: InputDecoration(
-                        hintText: "Enter Phone Number",
-                        labelText: "0xx-xxxx-xxx",
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(),
-                        ),
-                      ),
-                    ),
-                    Text("Email"),
-                    SizedBox(height: 10),
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "Enter Email Address",
-                          labelText: "example@gmail.com",
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(),
-                          )),
-                    ),
-                    SizedBox(height: 20),
-                    Container(
-                      width: double.maxFinite,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          backgroundColor: Colors.red,
-                          foregroundColor: Colors.white,
-                        ),
-                        child: Text(
-                          "Continue".toUpperCase(),
-                        ),
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ),

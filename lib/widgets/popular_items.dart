@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:food_app/models/pupolar_items.dart';
 
 class PopularItemsWidget extends StatelessWidget {
@@ -52,7 +53,7 @@ class PopularItemsWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          width: 140,
+                          width: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             image: DecorationImage(
@@ -63,33 +64,35 @@ class PopularItemsWidget extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              PopularItemsList[actualIndex].title,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                PopularItemsList[actualIndex].title,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18,
+                                ),
                               ),
-                            ),
-                            Text(
-                              PopularItemsList[actualIndex].vendor,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                                color: Colors.grey.shade400,
+                              Text(
+                                PopularItemsList[actualIndex].vendor,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
-                            ),
-                            Spacer(),
-                            Text(
-                              "\$ ${PopularItemsList[actualIndex].price}.00",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                              Spacer(),
+                              Text(
+                                "\$ ${PopularItemsList[actualIndex].price}.00",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),

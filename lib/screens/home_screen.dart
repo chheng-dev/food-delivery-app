@@ -20,8 +20,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12)),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                     height: 60,
                     width: 60,
                     child: Icon(
@@ -38,14 +39,15 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: TextField(
                         decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search for meals or area',
-                            suffixIcon: Icon(
-                              CupertinoIcons.search,
-                              size: 28,
-                            ),
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 15, horizontal: 18)),
+                          border: InputBorder.none,
+                          hintText: 'Search for meals or area',
+                          suffixIcon: Icon(
+                            CupertinoIcons.search,
+                            size: 28,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 15, horizontal: 18),
+                        ),
                       ),
                     ),
                   ),

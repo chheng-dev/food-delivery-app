@@ -40,7 +40,7 @@ class NearByPlaceWidget extends StatelessWidget {
           SizedBox(height: 20),
           Container(
             width: double.infinity,
-            height: 300,
+            height: 270,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: PopularItemsList.length,
@@ -60,7 +60,7 @@ class NearByPlaceWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            height: 150.0,
+                            height: 140.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               image: DecorationImage(
@@ -88,21 +88,19 @@ class NearByPlaceWidget extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               "McDonald's",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w600,
-                              ),
+                              style: Theme.of(context).textTheme.headline1,
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.only(top: 5),
                             child: Text(
                               "Mexican Creamy nachos",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.grey.shade600,
-                              ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline2
+                                  ?.copyWith(
+                                    color: Colors.black.withOpacity(.5),
+                                  ),
                             ),
                           ),
                           Padding(
@@ -136,6 +134,7 @@ class NearByPlaceWidget extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(height: 20),
         ],
       ),
     );

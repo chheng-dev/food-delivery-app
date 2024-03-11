@@ -15,10 +15,10 @@ class HeaderItemDetial extends StatelessWidget {
           right: 0,
           child: Container(
             width: double.maxFinite,
-            height: 300,
+            height: 200,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("images/pop_2.jpeg"),
+                image: AssetImage("images/feature-2.jpeg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -26,23 +26,29 @@ class HeaderItemDetial extends StatelessWidget {
         ),
         Positioned(
           left: 14,
-          top: 70,
+          top: 40,
           child: Row(
             children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.arrow_back_ios_new,
+              Container(
+                decoration: BoxDecoration(
                   color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios_new,
+                    color: Colors.black,
+                  ),
                 ),
               )
             ],
           ),
         ),
         Positioned(
-          top: 180,
+          top: 110,
           left: 14,
           right: 14,
           child: Container(
@@ -85,15 +91,16 @@ class HeaderItemDetial extends StatelessWidget {
                           ),
                           Text(
                             'Kien Svay, Kandal, Cambodia',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.5)),
+                            style: TextStyle(
+                              color: Colors.black.withOpacity(0.5),
+                            ),
                           )
                         ],
                       ),
                       IconButton(
                         onPressed: () {},
                         icon: Icon(
-                          CupertinoIcons.heart,
+                          Icons.favorite_border_outlined,
                           color: Colors.red,
                           size: 28,
                         ),

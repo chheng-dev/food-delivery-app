@@ -16,6 +16,18 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
         fontFamily: 'Poppins',
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          headline2: TextStyle(
+            fontSize: 15.0,
+            fontWeight: FontWeight.normal,
+            color: Colors.black.withOpacity(.5),
+          ),
+          bodyText2: TextStyle(
+            fontSize: 14.0,
+            color: Colors.black,
+          ),
+        ),
       ),
       home: SinginScreen(),
     );

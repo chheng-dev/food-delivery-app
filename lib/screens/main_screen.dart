@@ -34,27 +34,34 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentIndex].content,
-      bottomNavigationBar: Container(
-        height: 100,
-        child: AnimatedBottomNavigationBar(
-          backgroundColor: Colors.red,
-          icons: [
-            Icons.explore,
-            CupertinoIcons.bag_fill,
-            CupertinoIcons.cart_fill,
-            CupertinoIcons.person_circle
-          ],
-          iconSize: 40,
-          activeIndex: currentIndex,
-          leftCornerRadius: 32,
-          rightCornerRadius: 32,
-          gapLocation: GapLocation.none,
-          activeColor: Colors.white,
-          notchSmoothness: NotchSmoothness.verySmoothEdge,
-          onTap: (index) => {
-            setState(() => currentIndex = index),
-          },
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.explore),
+            label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.bag_fill),
+            label: 'Offer',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.cart_fill),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.person_circle),
+            label: 'Profile',
+          ),
+        ],
+        currentIndex: currentIndex,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black.withOpacity(.5),
+        backgroundColor: Colors.redAccent,
+        iconSize: 40,
+        onTap: (index) => setState(() {
+          currentIndex = index;
+        }),
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }

@@ -31,7 +31,7 @@ List<PupolarItemsModel> PopularItemsList = [
     price: 6,
   ),
   PupolarItemsModel(
-    image: "images/burger.jpeg",
+    image: "images/feature_4.jpeg",
     title: "Burger",
     vendor: 'By KFC',
     price: 10,
